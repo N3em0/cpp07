@@ -1,4 +1,4 @@
-NAME	:= ScalarConverter
+NAME	:= Array
 
 SRC_DIR := src
 BUILD_DIR	:=	.build
@@ -6,7 +6,6 @@ INC_DIR := includes
 
 SRC_FILES		:=	\
 main.cpp \
-ScalarConverter.cpp
 
 SRC		:=	$(addprefix $(SRC_DIR)/, $(SRC_FILES))
 OBJ			:=	$(SRC:$(SRC_DIR)/%.cpp=$(BUILD_DIR)/%.o)
