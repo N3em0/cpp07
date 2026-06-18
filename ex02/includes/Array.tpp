@@ -29,7 +29,8 @@ template <typename T> Array<T> &Array<T>::operator=(const Array<T> &rhs)
 {
   if (this != &rhs)
   {
-    delete[] this->elements_;
+    if (this->elements_)
+      delete[] this->elements_;
     this->elements_ = new T[rhs.n_];
     this->n_ = rhs.n_;
     for (size_t i = 0; i < rhs.n_; i++)
