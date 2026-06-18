@@ -9,9 +9,11 @@ int main()
     Array<int> z;
     Array<int> a(12);
     Array<char> b(12);
+    Array<char> k(10);
+
     for (size_t i = 0; i < 12; i++)
       b[i] = 48 + i;
-
+    k = b;
     std::cout << "\n============================================\n\n";
 
     std::cout << "Array<int> z print default values and size\n----- "
@@ -31,6 +33,11 @@ int main()
     std::cout << "Array<char> b print\n----- " << std::endl;
     for (size_t i = 0; i < b.size(); i++)
       std::cout << "[" << b[i] << "] ";
+    std::cout << std::endl;
+    std::cout << "\n--------------------------------------------\n\n";
+    std::cout << "Array<char> k print\n----- " << std::endl;
+    for (size_t i = 0; i < k.size(); i++)
+      std::cout << "[" << k[i] << "] ";
     std::cout << std::endl;
     std::cout << "\n============================================\n\n";
 
